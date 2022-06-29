@@ -1,4 +1,4 @@
-import { isNil } from "./isNil"
+import { useMount } from "./useMount"
 
 /**
  * @name 语法 类方法
@@ -8,5 +8,5 @@ import { isNil } from "./isNil"
  * isNil         //判断类型-是否为空
  */
 export const CSLang = {
-  isNil
+  useMount
 }
