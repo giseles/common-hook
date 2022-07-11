@@ -11,7 +11,7 @@ export * from "./useMouse"
 export * from "./useTitle"
 
 /**
- * @name 语法 类方法
+ * @name 浏览器 Hooks
  * @example
  * useEventListener   // 事件监听
  * useFavicon         // 设置页面的favicon

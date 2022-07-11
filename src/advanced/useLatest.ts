@@ -6,7 +6,7 @@ import { useRef } from "react"
  * @example
  * useLatest(fn)
  */
-export function useLatest<T>(value: T) {
+export const useLatest = <T>(value: T) => {
   const ref = useRef(value)
   ref.current = value
 

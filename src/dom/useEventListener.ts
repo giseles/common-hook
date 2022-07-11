@@ -12,11 +12,11 @@ type noop = (...p: any) => void
  * () => {setValue(value + 1)}
  * ,{ target: ref });
  */
-export function useEventListener(
+export const useEventListener = (
   eventName: string,
   handler: noop,
   options: any = {}
-) {
+) => {
   const handlerRef = useLatest(handler)
 
   useEffectWithTarget(
