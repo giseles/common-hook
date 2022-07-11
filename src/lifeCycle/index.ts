@@ -1,12 +1,20 @@
 import { useMount } from "./useMount"
+import { useUnmount } from "./useUnmount"
+import { useUnmountedRef } from "./useUnmountedRef"
+
+export * from "./useMount"
+export * from "./useUnmount"
+export * from "./useUnmountedRef"
 
 /**
- * @name 语法 类方法
+ * @name 生命周期 Hooks
  * @example
- * isArray       //判断类型-数组
- * isBoolean     //判断类型-布尔值
- * isNil         //判断类型-是否为空
+ * useMount           //在组件首次渲染时，执行方法
+ * useUnmount         //在组件卸载时，执行函数
+ * useUnmountedRef    //获取当前组件是否已经卸载的 Hook
  */
-export const CSLang = {
-  useMount
+export const LifeCycle = {
+  useMount,
+  useUnmount,
+  useUnmountedRef
 }
