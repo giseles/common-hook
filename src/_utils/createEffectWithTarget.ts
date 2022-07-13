@@ -7,7 +7,6 @@ import type {
 import { useRef } from "react"
 import { useUnmount } from "common-hook"
 import depsAreSame from "./depsAreSame"
-import type { BasicTarget } from "./domTarget"
 import { getTargetElement } from "./domTarget"
 
 const createEffectWithTarget = (
@@ -20,15 +19,18 @@ const createEffectWithTarget = (
    * @param target target should compare ref.current vs ref.current, dom vs dom, ()=>dom vs ()=>dom
    */
   const useEffectWithTarget = (
+    // @ts-ignore
     effect: EffectCallback,
+    // @ts-ignore
     deps: DependencyList,
-    target: BasicTarget<any> | BasicTarget<any>[]
+    target: any
   ) => {
     const hasInitRef = useRef(false)
-
+    // @ts-ignore
     const lastElementRef = useRef<(Element | null)[]>([])
+    // @ts-ignore
     const lastDepsRef = useRef<DependencyList>([])
-
+    // @ts-ignore
     const unLoadRef = useRef<any>()
 
     useEffectType(() => {

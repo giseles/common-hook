@@ -23,6 +23,7 @@ export const useInterval = (
   const timerRef = useRef()
 
   useEffect(() => {
+    //@ts-ignore
     if (!isNumber(delay) || delay < 0) return
 
     if (immediate) {

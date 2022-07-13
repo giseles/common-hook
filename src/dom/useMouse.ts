@@ -1,5 +1,4 @@
 import { useRafState, useEventListener } from "common-hook"
-import type { BasicTarget } from "../_utils/domTarget"
 import { getTargetElement } from "../_utils/domTarget"
 
 /**
@@ -38,7 +37,7 @@ const initState: CursorState = {
   elementPosY: NaN
 }
 
-export const useMouse = (target?: BasicTarget) => {
+export const useMouse = (target?: any) => {
   const [state, setState] = useRafState(initState)
 
   useEventListener(

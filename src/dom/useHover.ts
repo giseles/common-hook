@@ -1,5 +1,4 @@
 import { useBoolean, useEventListener } from "common-hook"
-import type { BasicTarget } from "../_utils/domTarget"
 
 export interface Options {
   onEnter?: () => void
@@ -12,7 +11,7 @@ export interface Options {
  * @example
  * const isHovering = useHover(ref)
  */
-export const useHover = (target: BasicTarget, options?: Options): boolean => {
+export const useHover = (target: any, options?: Options): boolean => {
   const { onEnter, onLeave, onChange } = options || {}
 
   const [state, { setTrue, setFalse }] = useBoolean(false)

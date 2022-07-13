@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react"
 import { useUnmount } from "common-hook"
-import isBrowser from "../_utils/isBrowser"
+import { isBrowser } from "common-screw"
 
 /**
  * @name 设置页面标题
