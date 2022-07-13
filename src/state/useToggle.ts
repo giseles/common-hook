@@ -1,12 +1,5 @@
 import { useMemo, useState } from "react"
 
-interface Actions<T> {
-  setLeft: () => void
-  setRight: () => void
-  set: (value: T) => void
-  toggle: () => void
-}
-
 /**
  * @name 用于在两个状态值间切换Hook
  * @description 默认为 boolean 切换，基础用法与 useBoolean 一致

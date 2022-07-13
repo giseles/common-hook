@@ -1,22 +1,15 @@
 import { useMemo } from "react"
 import { useToggle } from "common-hook"
 
-export interface Actions {
-  setTrue: () => void
-  setFalse: () => void
-  set: (value: boolean) => void
-  toggle: () => void
-}
-
 /**
  * @name 切换boolean，可以接收默认值
  * @example
  * const [state, { toggle, setTrue, setFalse }] = useBoolean(true)
  */
-export const useBoolean = (defaultValue = false): [boolean, Actions] => {
+export const useBoolean = (defaultValue = false) => {
   const [state, { toggle, set }] = useToggle(defaultValue)
 
-  const actions: Actions = useMemo(() => {
+  const actions = useMemo(() => {
     const setTrue = () => set(true)
     const setFalse = () => set(false)
     return {

@@ -8,7 +8,7 @@ import { useDebounceFn } from "common-hook"
  * @example
  * const debouncedValue = useDebounce(value, { wait: 500 })
  */
-export const useDebounce = <T>(value: T, options?: any) => {
+export const useDebounce = (value: any, options?: any) => {
   const [debounced, setDebounced] = useState(value)
 
   const { run } = useDebounceFn(() => {
@@ -21,5 +21,3 @@ export const useDebounce = <T>(value: T, options?: any) => {
 
   return debounced
 }
-
-export default useDebounce
