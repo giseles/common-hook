@@ -7,7 +7,7 @@ export interface Options {
 }
 
 /**
- * @name 监听DOM元素是否有鼠标悬停
+ * @name 监听DOM元素是否鼠标悬停
  * @example
  * const isHovering = useHover(ref)
  */

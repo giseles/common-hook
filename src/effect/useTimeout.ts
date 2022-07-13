@@ -13,6 +13,7 @@ export const useTimeout = (fn: () => void, delay: number | undefined) => {
   const timerRef = useRef()
 
   useEffect(() => {
+    //@ts-ignore
     if (!isNumber(delay) || delay < 0) return
 
     timerRef.current = setTimeout(() => {

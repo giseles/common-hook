@@ -2,8 +2,8 @@ import { useEffect } from "react"
 import { isFunction } from "common-screw"
 
 /**
- * @name 组件加载时进行异步的检查
- * @description 支持异步函数
+ * @name 支持异步函数
+ * @description 例如：组件加载时进行异步的检查
  * @example
  *  useAsyncEffect(async () => {setPass(await mockCheck())}, []);
  */

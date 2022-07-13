@@ -23,9 +23,9 @@ export * from "./useUpdateEffect"
 /**
  * @name Effect Hooks
  * @example
- * useUpdateEffect       // 依赖项更新时,深度比较
- * useDeepCompareEffect  // 首次不执行，只在依赖项更新时执行
- * useAsyncEffect        // 组件加载时进行异步的检查
+ * useUpdateEffect       // 首次不执行，只在依赖项更新时执行
+ * useDeepCompareEffect  // 依赖项更新时,深度比较
+ * useAsyncEffect        // 支持异步函数
  * useLockFn             // 给一个异步函数增加竞态锁，防止并发执行
  * useDebounceEffect     // useEffect+防抖
  * useDebounceFn         // 处理防抖函数的Hook
