@@ -1,6 +1,6 @@
-import throttle from "lodash/throttle"
 import { useMemo } from "react"
 import { useUnmount, useLatest } from "common-hook"
+import { throttle } from "common-screw"
 
 type noop = (...args: any) => any
 
@@ -25,6 +25,7 @@ export const useThrottleFn = <T extends noop>(fn: T, options?: any) => {
     () =>
       throttle(
         (...args: Parameters<T>): ReturnType<T> => {
+          // @ts-ignore
           return fnRef.current(...args)
         },
         wait,

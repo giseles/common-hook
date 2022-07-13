@@ -1,9 +1,9 @@
-import isBrowser from './isBrowser';
-import useEffectWithTarget from './useEffectWithTarget';
-import useLayoutEffectWithTarget from './useLayoutEffectWithTarget';
+import isBrowser from "./isBrowser"
+import useEffectWithTarget from "./useEffectWithTarget"
+import useLayoutEffectWithTarget from "./useLayoutEffectWithTarget"
 
 const useIsomorphicLayoutEffectWithTarget = isBrowser
   ? useLayoutEffectWithTarget
-  : useEffectWithTarget;
+  : useEffectWithTarget
 
-export default useIsomorphicLayoutEffectWithTarget;
+export default useIsomorphicLayoutEffectWithTarget

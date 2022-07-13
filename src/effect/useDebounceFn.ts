@@ -1,6 +1,6 @@
-import debounce from "lodash/debounce"
 import { useMemo } from "react"
 import { useLatest, useUnmount } from "common-hook"
+import { debounce } from "common-screw"
 
 type noop = (...args: any) => any
 
@@ -27,6 +27,7 @@ export const useDebounceFn = <T extends noop>(fn: T, options?: any) => {
     () =>
       debounce(
         (...args: Parameters<T>): ReturnType<T> => {
+          // @ts-ignore
           return fnRef.current(...args)
         },
         wait,
