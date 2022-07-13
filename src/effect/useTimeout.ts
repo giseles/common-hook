@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef } from "react"
 import { useLatest } from "common-hook"
-import { isNumber } from "../_utils"
+import { isNumber } from "common-screw"
 
 /**
  * @name 处理setTimeout的Hook

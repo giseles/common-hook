@@ -1,6 +1,6 @@
 {
   "name": "common-hook",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "提供项目中常用的 React Hooks",
   "main": "es/index.js",
   "module": "es/index.js",

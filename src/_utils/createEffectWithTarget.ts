@@ -5,7 +5,7 @@ import type {
   useLayoutEffect
 } from "react"
 import { useRef } from "react"
-import { useUnmount } from "common-mid"
+import { useUnmount } from "common-hook"
 import depsAreSame from "./depsAreSame"
 import type { BasicTarget } from "./domTarget"
 import { getTargetElement } from "./domTarget"

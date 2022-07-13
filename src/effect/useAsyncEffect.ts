@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { isFunction } from "../_utils"
+import { isFunction } from "common-screw"
 
 /**
  * @name 组件加载时进行异步的检查
