@@ -43,6 +43,8 @@ useUnmount(() => {
 
 #### useTitle 设置页面标题
 
+#### useFavicon 设置页面 favicon
+
 #### useHover 监听 DOM 元素是否鼠标悬停
 
 #### useMouse 监听鼠标位置
