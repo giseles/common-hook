@@ -8,7 +8,7 @@ export function getTargetElement<T extends TargetType>(
   target: any,
   defaultElement?: T
 ) {
-  if (!isBrowser) {
+  if (!isBrowser()) {
     return undefined
   }
 
