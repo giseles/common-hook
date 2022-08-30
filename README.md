@@ -1,10 +1,15 @@
-# common-hook
+ <h1 align="center">common-hook</h1>
+<div align="center">
 
-> 前端业务代码工具库
+English | [简体中文](./README-zh_CN.md)
 
-提供项目中常用的 React Hooks，对输入输出函数做了特殊处理，避免闭包问题,包含丰富的基础 Hooks 以及提炼自业务的高级 Hooks
+</div>
 
-### 安装说明
+> Front-end business code tool library
+
+Provide the commonly used React Hooks in the project, and the input and output functions do a special treatment to avoid closure problems, including a wealth of basic Hooks and refined from the business of advanced Hooks.
+
+### Install
 
 ```js
 npm i common-hook
@@ -16,7 +21,9 @@ yarn add common-hook
 
 ```
 
-### 按需加载 (默认支持基于 ES Modules 的 Tree Shaking)
+### Demand Loading
+
+> Default support for ES Modules-based Tree Shaking
 
 ```js
 import { useMount, useUnmount } from "common-hook"
@@ -29,62 +36,62 @@ useUnmount(() => {
 })
 ```
 
-## :package: API 文档
+## :package: API Documentation
 
-### 辅助 Hooks
+### Advanced Hooks
 
-#### &emsp;&emsp;[useLatest](https://github.com/giseles/common-hook/blob/main/src/advanced/useLatest.ts) &emsp;&emsp;&emsp;返回的永远是最新值
+#### &emsp;&emsp;[useLatest](https://github.com/giseles/common-hook/blob/main/src/advanced/useLatest.ts) &emsp;&emsp;&emsp;The returned value is always the latest
 
-### 浏览器 Hooks
+### Dom Hooks
 
-#### &emsp;&emsp;[useEventListener](https://github.com/giseles/common-hook/blob/main/src/dom/useEventListener.ts) &emsp;&emsp;&emsp;事件监听
+#### &emsp;&emsp;[useEventListener](https://github.com/giseles/common-hook/blob/main/src/dom/useEventListener.ts) &emsp;&emsp;&emsp;Event Listener
 
-#### &emsp;&emsp;[useTitle](https://github.com/giseles/common-hook/blob/main/src/dom/useTitle.ts) &emsp;&emsp;&emsp;设置页面标题
+#### &emsp;&emsp;[useTitle](https://github.com/giseles/common-hook/blob/main/src/dom/useTitle.ts) &emsp;&emsp;&emsp;Set page title
 
-#### &emsp;&emsp;[useFavicon](https://github.com/giseles/common-hook/blob/main/src/dom/useFavicon.ts) &emsp;&emsp;&emsp;设置页面 favicon
+#### &emsp;&emsp;[useFavicon](https://github.com/giseles/common-hook/blob/main/src/dom/useFavicon.ts) &emsp;&emsp;&emsp;Set page favicon
 
-#### &emsp;&emsp;[useHover](https://github.com/giseles/common-hook/blob/main/src/dom/useHover.ts) &emsp;&emsp;&emsp;监听 DOM 元素是否鼠标悬停
+#### &emsp;&emsp;[useHover](https://github.com/giseles/common-hook/blob/main/src/dom/useHover.ts) &emsp;&emsp;&emsp;Listen to DOM elements for mouse hover
 
-#### &emsp;&emsp;[useMouse](https://github.com/giseles/common-hook/blob/main/src/dom/useMouse.ts) &emsp;&emsp;&emsp;监听鼠标位置
+#### &emsp;&emsp;[useMouse](https://github.com/giseles/common-hook/blob/main/src/dom/useMouse.ts) &emsp;&emsp;&emsp;Listen to mouse position
 
 ### Effect Hooks
 
-#### &emsp;&emsp;[useUpdateEffect](https://github.com/giseles/common-hook/blob/main/src/effect/useUpdateEffect.ts) &emsp;&emsp;&emsp;首次不执行，只在依赖项更新时执行
+#### &emsp;&emsp;[useUpdateEffect](https://github.com/giseles/common-hook/blob/main/src/effect/useUpdateEffect.ts) &emsp;&emsp;&emsp;Not executed for the first time, only when dependencies are updated
 
-#### &emsp;&emsp;[useDeepCompareEffect](https://github.com/giseles/common-hook/blob/main/src/effect/useDeepCompareEffect.ts) &emsp;&emsp;&emsp;依赖项更新时,深度比较执行
+#### &emsp;&emsp;[useDeepCompareEffect](https://github.com/giseles/common-hook/blob/main/src/effect/useDeepCompareEffect.ts) &emsp;&emsp;&emsp;When a dependency is updated, a deep comparison is performed
 
-#### &emsp;&emsp;[useAsyncEffect](https://github.com/giseles/common-hook/blob/main/src/effect/useAsyncEffect.ts) &emsp;&emsp;&emsp;支持异步函数
+#### &emsp;&emsp;[useAsyncEffect](https://github.com/giseles/common-hook/blob/main/src/effect/useAsyncEffect.ts) &emsp;&emsp;&emsp;Support asynchronous functions
 
-#### &emsp;&emsp;[useLockFn](https://github.com/giseles/common-hook/blob/main/src/effect/useLockFn.ts) &emsp;&emsp;&emsp;给一个异步函数增加竞态锁，防止并发执行
+#### &emsp;&emsp;[useLockFn](https://github.com/giseles/common-hook/blob/main/src/effect/useLockFn.ts) &emsp;&emsp;&emsp;Add a competing lock to an asynchronous function to prevent concurrent execution
 
-#### &emsp;&emsp;[useDebounceEffect](https://github.com/giseles/common-hook/blob/main/src/effect/useDebounceEffect.ts) &emsp;&emsp;&emsp;useEffect+防抖
+#### &emsp;&emsp;[useDebounceEffect](https://github.com/giseles/common-hook/blob/main/src/effect/useDebounceEffect.ts) &emsp;&emsp;&emsp;useEffect + Debounce
 
-#### &emsp;&emsp;[useDebounceFn](https://github.com/giseles/common-hook/blob/main/src/effect/useDebounceFn.ts) &emsp;&emsp;&emsp;处理防抖函数的 Hook
+#### &emsp;&emsp;[useDebounceFn](https://github.com/giseles/common-hook/blob/main/src/effect/useDebounceFn.ts) &emsp;&emsp;&emsp;Hooks to handle debounce
 
-#### &emsp;&emsp;[useThrottleEffect](https://github.com/giseles/common-hook/blob/main/src/effect/useThrottleEffect.ts) &emsp;&emsp;&emsp;useEffect+节流
+#### &emsp;&emsp;[useThrottleEffect](https://github.com/giseles/common-hook/blob/main/src/effect/useThrottleEffect.ts) &emsp;&emsp;&emsp;useEffect + Throttle
 
-#### &emsp;&emsp;[useThrottleFn](https://github.com/giseles/common-hook/blob/main/src/effect/useDebounceFn.ts) &emsp;&emsp;&emsp;处理函数节流的 Hook
+#### &emsp;&emsp;[useThrottleFn](https://github.com/giseles/common-hook/blob/main/src/effect/useDebounceFn.ts) &emsp;&emsp;&emsp;Hooks to handle debounce
 
-#### &emsp;&emsp;[useInterval](https://github.com/giseles/common-hook/blob/main/src/effect/useInterval.ts) &emsp;&emsp;&emsp;处理 setInterval 的 Hook
+#### &emsp;&emsp;[useInterval](https://github.com/giseles/common-hook/blob/main/src/effect/useInterval.ts) &emsp;&emsp;&emsp;Hooks to handle setInterval
 
-#### &emsp;&emsp;[useTimeout](https://github.com/giseles/common-hook/blob/main/src/effect/useTimeout.ts) &emsp;&emsp;&emsp;处理 setTimeout 的 Hook
+#### &emsp;&emsp;[useTimeout](https://github.com/giseles/common-hook/blob/main/src/effect/useTimeout.ts) &emsp;&emsp;&emsp;Hooks to handle setTimeout
 
-### 生命周期 Hooks
+### LifeCycle Hooks
 
-#### &emsp;&emsp;[useMount](https://github.com/giseles/common-hook/blob/main/src/lifeCycle/useMount.ts) &emsp;&emsp;&emsp;在组件首次渲染时，执行方法
+#### &emsp;&emsp;[useMount](https://github.com/giseles/common-hook/blob/main/src/lifeCycle/useMount.ts) &emsp;&emsp;&emsp;Executed when the component is first rendered
 
-#### &emsp;&emsp;[useUnmount](https://github.com/giseles/common-hook/blob/main/src/lifeCycle/useUnmount.ts) &emsp;&emsp;&emsp;在组件卸载时，执行函数
+#### &emsp;&emsp;[useUnmount](https://github.com/giseles/common-hook/blob/main/src/lifeCycle/useUnmount.ts) &emsp;&emsp;&emsp;Execute on component unmount
 
-### 状态 Hooks
+### State Hooks
 
-#### &emsp;&emsp;[useSetState](https://github.com/giseles/common-hook/blob/main/src/state/useSetState.ts) &emsp;&emsp;&emsp;管理 object 类型 state 的 Hooks
+#### &emsp;&emsp;[useSetState](https://github.com/giseles/common-hook/blob/main/src/state/useSetState.ts) &emsp;&emsp;&emsp;Hooks to manage object type states
 
-#### &emsp;&emsp;[useBoolean](https://github.com/giseles/common-hook/blob/main/src/state/useBoolean.ts) &emsp;&emsp;&emsp;切换 boolean，可以接收默认值
+#### &emsp;&emsp;[useBoolean](https://github.com/giseles/common-hook/blob/main/src/state/useBoolean.ts) &emsp;&emsp;&emsp;Toggle boolean to receive default value
 
-#### &emsp;&emsp;[useToggle](https://github.com/giseles/common-hook/blob/main/src/state/useToggle.ts) &emsp;&emsp;&emsp;用于在两个状态值间切换 Hook
+#### &emsp;&emsp;[useToggle](https://github.com/giseles/common-hook/blob/main/src/state/useToggle.ts) &emsp;&emsp;&emsp;Hooks to switch between two state values
 
-#### &emsp;&emsp;[useDebounce](https://github.com/giseles/common-hook/blob/main/src/state/useDebounce.ts) &emsp;&emsp;&emsp;处理防抖值 Hook
+#### &emsp;&emsp;[useDebounce](https://github.com/giseles/common-hook/blob/main/src/state/useDebounce.ts) &emsp;&emsp;&emsp;Hook for handling debounce values
 
-#### &emsp;&emsp;[useThrottle](https://github.com/giseles/common-hook/blob/main/src/state/useThrottle.ts) &emsp;&emsp;&emsp;处理节流值 Hook
+#### &emsp;&emsp;[useThrottle](https://github.com/giseles/common-hook/blob/main/src/state/useThrottle.ts) &emsp;&emsp;&emsp;Hook for handling throttle values
 
-#### &emsp;&emsp;[useRafState](https://github.com/giseles/common-hook/blob/main/src/state/useRafState.ts) &emsp;&emsp;&emsp;只在 requestAnimationFrame callback 时更新 state
+#### &emsp;&emsp;[useRafState](https://github.com/giseles/common-hook/blob/main/src/state/useRafState.ts) &emsp;&emsp;&emsp;Update state only on requestAnimationFrame callback
